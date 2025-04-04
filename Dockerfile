@@ -8,7 +8,7 @@ ARG DAY_OF_WEEK=*
 ARG TZ=Etc/UTC
 ARG FETCH_SIZE=7
 
-RUN apk add xmltv perl-json tzdata --no-cache
+RUN apk add xmltv perl-json tzdata curl --no-cache
 RUN mkdir /etc/cron && \
     echo "${MINUTE} ${HOUR} ${DAY_OF_MONTH} ${MONTH} ${DAY_OF_WEEK} run-parts /etc/periodic/daily" > /etc/cron/crontab && \
     echo "" >> /etc/cron/crontab && \
