@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3
 
 ARG MINUTE=0
 ARG HOUR=6
